@@ -7,3 +7,5 @@ ReactDOM.render(
     <Home/>,
     document.getElementById('root')
 );
+
+console.log("Init");
