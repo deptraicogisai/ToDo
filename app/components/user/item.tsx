@@ -13,7 +13,8 @@ export class Item extends React.Component<ItemProp,{}> {
 
     render() {
         return (
-            <tr className={this.props.index % 2 ? 'info' : 'success'} onClick={()=>this.ViewUserDetail()}>
+            <tr className='wow fadeInRight animated '
+                data-wow-duration="2000ms" data-wow-delay="1000ms" onClick={()=>this.ViewUserDetail()}>
                 <td>
                     {this.props.item.id}
                 </td>

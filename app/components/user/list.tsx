@@ -53,7 +53,7 @@ export class List extends React.Component<{},ListState> {
     render() {
         return (
             <div>
-                <table className="table table-inverse table-hover animated bounceInUp">
+                <table className="table table-inverse table-hover">
                     <tr>
                         <th>ID</th>
                         <th>First Name</th>
