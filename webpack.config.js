@@ -1,6 +1,6 @@
 module.exports = {
     entry: {
-        app: ["./app/app.tsx"]
+        app: ['babel-polyfill', 'whatwg-fetch', "./app/app.tsx"]
     },
     output: {
         path: "./dist/public/application",
@@ -20,7 +20,7 @@ module.exports = {
             {test: /\.js$/, loader: "source-map-loader"}
         ]
     },
-    devtool:'source-map',
+    devtool: 'source-map',
 
     externals: {
         "react": "React",

@@ -1,0 +1,8 @@
+.navigate {
+    list-style-type: none;
+}
+
+.navigate li {
+    display: inline-block;
+    width: 100px;
+}
