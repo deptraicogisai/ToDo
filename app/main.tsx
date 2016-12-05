@@ -53,9 +53,7 @@ export class Main extends React.Component<{},MainState> {
                             <li>
                                 <Link activeClassName="active" to="/">Home</Link>
                             </li>
-                            <li><Link activeClassName="active" to="/user">List</Link>
-                            </li>
-                            <li><Link activeClassName="active" to="/user/3">Detail</Link>
+                            <li><Link activeClassName="active" to="/user">User</Link>
                             </li>
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
