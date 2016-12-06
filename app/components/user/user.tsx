@@ -1,11 +1,30 @@
 import * as React from 'react'
-export class UserLayout extends React.Component<{},{}> {
+import {Constant} from "../../constants/constant";
+import {store} from "../../stores/store";
+
+interface  UserState {
+    title: string
+}
+
+export class UserLayout extends React.Component<{}, UserState> {
+
+    state: UserState = {
+        title: Constant.UserPage
+    }
+
+    componentDidMount() {
+        store.subscribe(() => {
+            this.state.title = store.getState().title;
+            this.setState(this.state);
+        });
+    }
+
     render() {
         return (
             <div className="container">
                 <div className="col-md-offset-2 col-md-8">
                     <div className="panel panel-primary">
-                        <div className="panel-heading">User List</div>
+                        <div className="panel-heading">{this.state.title}</div>
                         <div className="panel-body">
                             { this.props.children}
                         </div>

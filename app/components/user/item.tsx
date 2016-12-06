@@ -14,7 +14,7 @@ export class Item extends React.Component<ItemProp,{}> {
     render() {
         return (
             <tr className='wow fadeInRight animated '
-                data-wow-duration="2000ms" data-wow-delay="1000ms" onClick={()=>this.ViewUserDetail()}>
+                data-wow-duration="2000ms" data-wow-delay="2s" onClick={()=>this.ViewUserDetail()}>
                 <td>
                     {this.props.item.id}
                 </td>

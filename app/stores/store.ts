@@ -1,21 +1,33 @@
 import {createStore} from 'redux'
+import {Constant} from "../constants/constant";
 
 /**
  * Created by Clearpath on 12/3/2016.
  */
 
-interface  LoginState {
+interface  CommonState {
     isLogin?: boolean;
+    title?: string;
 }
 
-function loginStore(state: LoginState = {isLogin: false}, action) {
+function loginStore(state: CommonState = {isLogin: false}, action) {
     switch (action.type) {
-        case 'Login':
+        case Constant.Login:
             state.isLogin = true;
 
             return state;
-        case 'Logout':
+        case Constant.Logout:
             state.isLogin = false;
+
+            return state;
+
+        case Constant.UserPage:
+            state.title = 'User List'
+
+            return state;
+
+        case Constant.UserDetailPage:
+            state.title = 'User Detail'
 
             return state;
     }

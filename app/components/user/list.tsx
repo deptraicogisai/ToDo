@@ -2,6 +2,8 @@ import  * as React from 'react'
 import {Item} from "./item";
 import * as service from '../../service/service'
 import {Loader} from "../loader/loader";
+import {store} from "../../stores/store";
+import {Constant} from "../../constants/constant";
 
 interface ListState {
     list: any;
@@ -47,6 +49,11 @@ export class List extends React.Component<{},ListState> {
     }
 
     componentDidMount() {
+        store.dispatch(
+            {
+                type: Constant.UserPage
+            }
+        );
         this.LoadData();
     }
 
@@ -74,17 +81,15 @@ export class List extends React.Component<{},ListState> {
                         <Loader isLoading={this.state.isLoading}/>
                     </div>
                     <div className="col-md-7 text-right">
-                        <button className="btn btn-primary" disabled={this.state.currentPage == 1}
-                                onClick={()=>this.getUserPage(0)}>
-                            <i className="glyphicon glyphicon-arrow-left"></i>
-                        </button>
+                        <a href="#"
+                           className={`hvr-icon-back ${this.state.currentPage == 1 && 'btn-is-disabled'}`}
+                           style={{'text-decoration': 'none'}}
+                           onClick={() => this.getUserPage(0)}>Previous</a>
                         &nbsp;&nbsp;
-                        <button className="btn btn-primary"
-                                disabled={this.state.currentPage == this.state.total_page}
-                                onClick={()=>this.getUserPage(1)}>
-                            <i className="glyphicon glyphicon-arrow-right"></i>
-                        </button>
-
+                        <a href="#"
+                           className={`hvr-icon-forward ${this.state.currentPage == this.state.total_page && 'btn-is-disabled'}`}
+                           style={{'text-decoration': 'none'}}
+                           onClick={()=>this.getUserPage(1)}>Next</a>
                     </div>
                 </div>
             </div>
