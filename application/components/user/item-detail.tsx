@@ -1,9 +1,8 @@
 import * as React from 'react'
 import * as service from '../../service/service'
-import {store} from "../../stores/store";
 import {Constant} from "../../constants/constant";
-
 import {browserHistory} from 'react-router';
+import {store} from "../../stores/index";
 
 interface UserDetailState {
     item: any;
@@ -16,7 +15,8 @@ export class ItemDetail extends React.Component<any,UserDetailState> {
     }
 
     async componentDidMount() {
-        store.dispatch(
+
+        store.panelStore.dispatch(
             {
                 type: Constant.UserDetailPage
             }

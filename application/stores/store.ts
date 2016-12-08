@@ -12,15 +12,6 @@ interface  CommonState {
 
 function loginStore(state: CommonState = {isLogin: false}, action) {
     switch (action.type) {
-        case Constant.Login:
-            state.isLogin = true;
-
-            return state;
-        case Constant.Logout:
-            state.isLogin = false;
-
-            return state;
-
         case Constant.UserPage:
             state.title = 'User List'
 
@@ -33,4 +24,4 @@ function loginStore(state: CommonState = {isLogin: false}, action) {
     }
 }
 
-export const store = createStore(loginStore);
+export const panelStore = createStore(loginStore);

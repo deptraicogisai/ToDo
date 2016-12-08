@@ -1,6 +1,6 @@
 module.exports = {
     entry: {
-        app: ['babel-polyfill', 'whatwg-fetch', "./app/app.tsx"]
+        app: ['babel-polyfill', 'whatwg-fetch', "./dist/application/app.tsx"]
     },
     output: {
         path: "./dist/public/application",

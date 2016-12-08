@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {Constant} from "../../constants/constant";
-import {store} from "../../stores/store";
+import {panelStore} from "../../stores/store";
 
 interface  UserState {
     title: string
@@ -13,8 +13,8 @@ export class UserLayout extends React.Component<{}, UserState> {
     }
 
     componentDidMount() {
-        store.subscribe(() => {
-            this.state.title = store.getState().title;
+        panelStore.subscribe(() => {
+            this.state.title = panelStore.getState().title;
             this.setState(this.state);
         });
     }

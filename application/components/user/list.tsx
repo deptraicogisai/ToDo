@@ -2,8 +2,8 @@ import  * as React from 'react'
 import {Item} from "./item";
 import * as service from '../../service/service'
 import {Loader} from "../loader/loader";
-import {store} from "../../stores/store";
 import {Constant} from "../../constants/constant";
+import {store} from "../../stores/index";
 
 interface ListState {
     list: any;
@@ -49,7 +49,7 @@ export class List extends React.Component<{},ListState> {
     }
 
     componentDidMount() {
-        store.dispatch(
+        store.panelStore.dispatch(
             {
                 type: Constant.UserPage
             }
