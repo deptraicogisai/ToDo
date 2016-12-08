@@ -20,5 +20,3 @@ export function createAccessor<T extends mongoose.Document>(collectionName: stri
   return mongoose.model<T>(collectionName, schema);
 }
 
-// connect to the database
-mongoose.connect("mongodb://localhost/database");

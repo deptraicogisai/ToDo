@@ -32,6 +32,9 @@ export class Main extends React.Component<{},MainState> {
             const message = await  this.service.getMessage();
             this.setState({message});
 
+            const author = await this.service.getAuthors();
+            console.log(author);
+
         } catch (error) {
             this.state.message = error;
             this.setState(this.state);

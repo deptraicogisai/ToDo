@@ -25,10 +25,10 @@
     "mongoose": "^4.7.0",
     "@types/firebase": "^2.4.30",
     "@types/react": "^0.14.52",
+    "body-parser": "^1.15.2",
     "@types/react-dom": "^0.14.19",
     "@types/react-router": "^2.0.41",
     "@types/redux": "^3.6.0",
-    "body-parser": "^1.15.2",
     "firebase": "^3.6.2",
     "react-toastr": "^2.8.2",
     "whatwg-fetch": "^2.0.1"
