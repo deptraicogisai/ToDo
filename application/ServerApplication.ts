@@ -1,7 +1,7 @@
 import * as express from "express";
 import * as bodyParser from "body-parser";
 import * as path from "path";
-import {services} from "./service/index";
+import {services} from "./services/index";
 import * as mongoose from 'mongoose';
 const application = express();
 
@@ -12,7 +12,7 @@ application.use(express.static(__dirname + "/../public"));
 mongoose.connect("mongodb://localhost:27017/mydb");
 
 /// run the application
-application.post("/remote/:service/:method", async(request, response) => {
+application.post("/remote/:services/:method", async(request, response) => {
 
     const serviceName = request.params["service"];
     const methodName = request.params["method"];

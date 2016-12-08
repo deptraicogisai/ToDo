@@ -1,6 +1,6 @@
 import {authorAccessor} from "../common/server/AuthorAccessor";
 /**
- * Hello world service return a message from server
+ * Hello world services return a message from server
  */
 export class HelloWorldService {
 

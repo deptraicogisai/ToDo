@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as service from '../../service/service'
+import * as service from '../../clients/service'
 import {Constant} from "../../constants/constant";
 import {browserHistory} from 'react-router';
 import {store} from "../../stores/index";

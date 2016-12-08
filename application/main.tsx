@@ -6,7 +6,7 @@ import {authStore} from "./stores/authStore";
 import {UserLogin} from "./model/userLogin";
 import {Toastr} from "./components/notification/toast";
 import {store} from "./stores/index";
-import {HelloWorldService} from "./service/HelloWorldService";
+import {HelloWorldService} from "./services/HelloWorldService";
 
 interface MainState {
     title?: string
