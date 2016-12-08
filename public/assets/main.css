@@ -1,0 +1,19 @@
+.navigate {
+    list-style-type: none;
+}
+
+.navigate li {
+    display: inline-block;
+    width: 100px;
+}
+
+[class^="hvr-"] {
+    padding: 5px 15px;
+    border: 1px solid #67b168;
+    border-radius: 10px;
+}
+
+.btn-is-disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
