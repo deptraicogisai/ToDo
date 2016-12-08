@@ -1,8 +1,8 @@
 
 /**
- * invoke a service
+ * invoke a services
  *
- * @param serviceName name of the service
+ * @param serviceName name of the services
  * @param methodName method name
  * @param requestArguments list of arguments
  */

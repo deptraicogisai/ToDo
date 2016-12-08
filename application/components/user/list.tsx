@@ -1,6 +1,6 @@
 import  * as React from 'react'
 import {Item} from "./item";
-import * as service from '../../service/service'
+import * as service from '../../clients/service'
 import {Loader} from "../loader/loader";
 import {Constant} from "../../constants/constant";
 import {store} from "../../stores/index";
